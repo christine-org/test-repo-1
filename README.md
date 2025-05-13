@@ -15,3 +15,6 @@ git clone https://github.com/christine-org/test-repo-1.git
 cd test-repo-1
 ```
 
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
