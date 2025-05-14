@@ -6,4 +6,4 @@ This is a test repository for demonstrating Codegen's capabilities.
 - Simple demonstration repository
 - Used for testing PR creation
 - Created by Codegen
-
+- Includes a sample JavaScript utility file with basic math functions
