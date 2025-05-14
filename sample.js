@@ -24,8 +24,18 @@ function multiply(a, b) {
   return a * b;
 }
 
+/**
+ * Subtracts the second number from the first
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} The difference of a and b
+ */
+function subtract(a, b) {
+  return a - b;
+}
+
 module.exports = {
   add,
-  multiply
+  multiply,
+  subtract
 };
-
