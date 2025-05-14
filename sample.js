@@ -34,8 +34,23 @@ function subtract(a, b) {
   return a - b;
 }
 
+/**
+ * Divides the first number by the second
+ * @param {number} a - First number (dividend)
+ * @param {number} b - Second number (divisor)
+ * @returns {number} The quotient of a and b
+ * @throws {Error} If b is zero
+ */
+function divide(a, b) {
+  if (b === 0) {
+    throw new Error('Division by zero is not allowed');
+  }
+  return a / b;
+}
+
 module.exports = {
   add,
   multiply,
-  subtract
+  subtract,
+  divide
 };
