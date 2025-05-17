@@ -48,9 +48,20 @@ function divide(a, b) {
   return a / b;
 }
 
+/**
+ * Raises the first number to the power of the second number
+ * @param {number} a - Base number
+ * @param {number} b - Exponent
+ * @returns {number} The result of a raised to the power of b
+ */
+function exponentiate(a, b) {
+  return Math.pow(a, b);
+}
+
 module.exports = {
   add,
   multiply,
   subtract,
-  divide
+  divide,
+  exponentiate
 };
