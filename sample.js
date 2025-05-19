@@ -48,9 +48,20 @@ function divide(a, b) {
   return a / b;
 }
 
+/**
+ * Calculates the power of a number
+ * @param {number} base - The base number
+ * @param {number} exponent - The exponent
+ * @returns {number} The result of base raised to the power of exponent
+ */
+function power(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
 module.exports = {
   add,
   multiply,
   subtract,
-  divide
+  divide,
+  power
 };
