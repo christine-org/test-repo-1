@@ -1,0 +1,21 @@
+name: Exit With Error
+
+on:
+  workflow_dispatch:  # This allows manual triggering
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  fail-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Deliberately fail
+        run: |
+          echo "This workflow is designed to fail"
+          exit 1
+
