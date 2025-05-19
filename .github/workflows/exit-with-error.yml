@@ -1,4 +1,4 @@
-name: Exit With Error
+name: hello world
 
 on:
   workflow_dispatch:  # This allows manual triggering
@@ -14,8 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Deliberately fail
+      - name: Print hello world
         run: |
-          echo "This workflow is designed to fail"
           exit 1
 
