@@ -48,9 +48,44 @@ function divide(a, b) {
   return a / b;
 }
 
+/**
+ * Calculates the power of a number
+ * @param {number} base - The base number
+ * @param {number} exponent - The exponent
+ * @returns {number} The result of base raised to the power of exponent
+ */
+function power(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+/**
+ * Calculates the square root of a number
+ * @param {number} num - The number to calculate square root for
+ * @returns {number} The square root of the number
+ * @throws {Error} If num is negative
+ */
+function squareRoot(num) {
+  if (num < 0) {
+    throw new Error('Cannot calculate square root of negative number');
+  }
+  return Math.sqrt(num);
+}
+
+/**
+ * Calculates the absolute value of a number
+ * @param {number} num - The input number
+ * @returns {number} The absolute value of the number
+ */
+function absolute(num) {
+  return Math.abs(num);
+}
+
 module.exports = {
   add,
   multiply,
   subtract,
-  divide
+  divide,
+  power,
+  squareRoot,
+  absolute
 };
