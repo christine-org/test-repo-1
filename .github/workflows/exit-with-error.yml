@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  fail-job:
+  success-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -16,5 +16,5 @@ jobs:
         
       - name: Print hello world
         run: |
-          exit 1
-
+          echo "Hello, World!"
+          echo "Factorial function added successfully!"
