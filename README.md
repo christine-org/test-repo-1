@@ -13,6 +13,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `absolute(num)` - Calculates the absolute value of a number
 
 
+
 ## Usage
 
 ```javascript
