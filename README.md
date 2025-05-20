@@ -6,6 +6,7 @@ This repository contains a collection of JavaScript utility functions for common
 
 
 
+
 - `add(a, b)` - Adds two numbers together
 - `subtract(a, b)` - Subtracts the second number from the first
 - `multiply(a, b)` - Multiplies two numbers
