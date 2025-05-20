@@ -21,6 +21,8 @@ const mathUtils = require('./sample.js');
 console.log(mathUtils.add(5, 3));        // 8
 console.log(mathUtils.subtract(10, 4));  // 6
 console.log(mathUtils.power(2, 3));      // 8
+
+
 console.log(mathUtils.squareRoot(16));   // 4
 ```
 
