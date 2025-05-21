@@ -80,6 +80,85 @@ function absolute(num) {
   return Math.abs(num);
 }
 
+/**
+ * Calculates the factorial of a non-negative integer
+ * @param {number} num - The non-negative integer
+ * @returns {number} The factorial of the number
+ * @throws {Error} If num is negative or not an integer
+ */
+function factorial(num) {
+  if (num < 0 || !Number.isInteger(num)) {
+    throw new Error('Factorial is only defined for non-negative integers');
+  }
+  
+  if (num === 0 || num === 1) {
+    return 1;
+  }
+  
+  let result = 1;
+  for (let i = 2; i <= num; i++) {
+    result *= i;
+  }
+  
+  return result;
+}
+
+/**
+ * Checks if a number is prime
+ * @param {number} num - The number to check
+ * @returns {boolean} True if the number is prime, false otherwise
+ * @throws {Error} If num is not a positive integer
+ */
+function isPrime(num) {
+  if (num <= 0 || !Number.isInteger(num)) {
+    throw new Error('Prime check is only defined for positive integers');
+  }
+  
+  if (num === 1) {
+    return false;
+  }
+  
+  if (num <= 3) {
+    return true;
+  }
+  
+  if (num % 2 === 0 || num % 3 === 0) {
+    return false;
+  }
+  
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+/**
+ * Calculates the greatest common divisor (GCD) of two integers
+ * @param {number} a - First integer
+ * @param {number} b - Second integer
+ * @returns {number} The greatest common divisor
+ * @throws {Error} If inputs are not integers
+ */
+function gcd(a, b) {
+  if (!Number.isInteger(a) || !Number.isInteger(b)) {
+    throw new Error('GCD is only defined for integers');
+  }
+  
+  a = Math.abs(a);
+  b = Math.abs(b);
+  
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  
+  return a;
+}
+
 module.exports = {
   add,
   multiply,
@@ -87,5 +166,8 @@ module.exports = {
   divide,
   power,
   squareRoot,
-  absolute
+  absolute,
+  factorial,
+  isPrime,
+  gcd
 };

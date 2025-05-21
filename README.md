@@ -11,6 +11,9 @@ This repository contains a collection of JavaScript utility functions for common
 - `power(base, exponent)` - Calculates the power of a number
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
+- `factorial(num)` - Calculates the factorial of a non-negative integer
+- `isPrime(num)` - Checks if a number is prime
+- `gcd(a, b)` - Calculates the greatest common divisor of two integers
 
 ## Usage
 
@@ -22,6 +25,9 @@ console.log(mathUtils.add(5, 3));        // 8
 console.log(mathUtils.subtract(10, 4));  // 6
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
+console.log(mathUtils.factorial(5));     // 120
+console.log(mathUtils.isPrime(7));       // true
+console.log(mathUtils.gcd(48, 18));      // 6
 ```
 
 ## Error Handling
@@ -29,4 +35,6 @@ console.log(mathUtils.squareRoot(16));   // 4
 Some functions include error handling:
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
-
+- `factorial(num)` throws an error if the input is negative or not an integer
+- `isPrime(num)` throws an error if the input is not a positive integer
+- `gcd(a, b)` throws an error if the inputs are not integers
