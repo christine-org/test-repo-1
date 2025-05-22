@@ -11,6 +11,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `power(base, exponent)` - Calculates the power of a number
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
+- `modulo(a, b)` - Calculates the remainder of division
 
 ## Usage
 
@@ -22,6 +23,7 @@ console.log(mathUtils.add(5, 3));        // 8
 console.log(mathUtils.subtract(10, 4));  // 6
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
+console.log(mathUtils.modulo(10, 3));    // 1
 ```
 
 ## Error Handling
@@ -29,4 +31,4 @@ console.log(mathUtils.squareRoot(16));   // 4
 Some functions include error handling:
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
-
+- `modulo(a, b)` throws an error if the divisor is zero
