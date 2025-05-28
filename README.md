@@ -12,6 +12,8 @@ This repository contains a collection of JavaScript utility functions for common
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
 
+- 
+
 ## Usage
 
 ```javascript
