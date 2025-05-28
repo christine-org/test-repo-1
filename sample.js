@@ -80,6 +80,29 @@ function absolute(num) {
   return Math.abs(num);
 }
 
+/**
+ * Calculates the factorial of a non-negative integer
+ * @param {number} num - The non-negative integer
+ * @returns {number} The factorial of the number
+ * @throws {Error} If num is negative or not an integer
+ */
+function factorial(num) {
+  if (num < 0 || !Number.isInteger(num)) {
+    throw new Error('Factorial is only defined for non-negative integers');
+  }
+  
+  if (num === 0 || num === 1) {
+    return 1;
+  }
+  
+  let result = 1;
+  for (let i = 2; i <= num; i++) {
+    result *= i;
+  }
+  
+  return result;
+}
+
 module.exports = {
   add,
   multiply,
@@ -87,5 +110,6 @@ module.exports = {
   divide,
   power,
   squareRoot,
-  absolute
+  absolute,
+  factorial
 };
