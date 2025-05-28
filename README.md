@@ -30,3 +30,26 @@ Some functions include error handling:
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
 
+## Installation
+
+To use these utility functions in your project:
+
+1. Clone this repository
+2. Import the functions you need
+
+```javascript
+// Import specific functions
+const { add, multiply } = require('./sample.js');
+
+// Or import all functions
+const mathUtils = require('./sample.js');
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
