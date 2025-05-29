@@ -12,6 +12,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
 - `factorial(num)` - Calculates the factorial of a non-negative integer
+- `modulo(a, b)` - Calculates the remainder of a division
 
 ## Usage
 
@@ -24,6 +25,7 @@ console.log(mathUtils.subtract(10, 4));  // 6
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
+console.log(mathUtils.modulo(10, 3));    // 1
 ```
 
 ## Error Handling
@@ -32,3 +34,4 @@ Some functions include error handling:
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
+- `modulo(a, b)` throws an error if the divisor is zero

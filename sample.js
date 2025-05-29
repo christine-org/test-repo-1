@@ -103,6 +103,20 @@ function factorial(num) {
   return result;
 }
 
+/**
+ * Calculates the modulo (remainder) of a division
+ * @param {number} a - The dividend
+ * @param {number} b - The divisor
+ * @returns {number} The remainder of a divided by b
+ * @throws {Error} If b is zero
+ */
+function modulo(a, b) {
+  if (b === 0) {
+    throw new Error('Modulo by zero is not allowed');
+  }
+  return a % b;
+}
+
 module.exports = {
   add,
   multiply,
@@ -111,5 +125,6 @@ module.exports = {
   power,
   squareRoot,
   absolute,
-  factorial
+  factorial,
+  modulo
 };
