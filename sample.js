@@ -103,6 +103,31 @@ function factorial(num) {
   return result;
 }
 
+/**
+ * Calculates the average of an array of numbers
+ * @param {number[]} numbers - Array of numbers
+ * @returns {number} The average of the numbers
+ * @throws {Error} If the array is empty
+ */
+function average(numbers) {
+  if (!Array.isArray(numbers)) {
+    throw new Error('Input must be an array of numbers');
+  }
+  
+  if (numbers.length === 0) {
+    throw new Error('Cannot calculate average of an empty array');
+  }
+  
+  const sum = numbers.reduce((acc, val) => {
+    if (typeof val !== 'number') {
+      throw new Error('All elements in the array must be numbers');
+    }
+    return acc + val;
+  }, 0);
+  
+  return sum / numbers.length;
+}
+
 module.exports = {
   add,
   multiply,
@@ -111,5 +136,6 @@ module.exports = {
   power,
   squareRoot,
   absolute,
-  factorial
+  factorial,
+  average
 };
