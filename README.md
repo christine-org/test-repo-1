@@ -23,7 +23,6 @@ console.log(mathUtils.add(5, 3));        // 8
 console.log(mathUtils.subtract(10, 4));  // 6
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
-console.log(mathUtils.factorial(5));     // 120
 ```
 
 ## Error Handling
@@ -32,3 +31,4 @@ Some functions include error handling:
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(n)` throws an error if the input is negative or not an integer
+
