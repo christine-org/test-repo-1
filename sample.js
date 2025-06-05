@@ -82,24 +82,55 @@ function absolute(num) {
 
 /**
  * Calculates the factorial of a non-negative integer
- * @param {number} n - A non-negative integer
- * @returns {number} The factorial of n
- * @throws {Error} If n is negative or not an integer
+ * @param {number} num - The non-negative integer
+ * @returns {number} The factorial of the number
+ * @throws {Error} If num is negative or not an integer
  */
-function factorial(n) {
-  if (n < 0 || !Number.isInteger(n)) {
-    throw new Error('Factorial is only defined for non-negative integers');
+function factorial(num) {
+  // Input validation with more descriptive error messages
+  if (typeof num !== 'number') {
+    throw new TypeError('Input must be a number');
   }
   
-  if (n === 0 || n === 1) {
+  if (!Number.isInteger(num)) {
+    throw new TypeError('Factorial is only defined for integers');
+  }
+  
+  if (num < 0) {
+    throw new RangeError('Factorial is only defined for non-negative integers');
+  }
+  
+  // Handle base cases
+  if (num === 0 || num === 1) {
     return 1;
   }
   
-  let result = 1;
-  for (let i = 2; i <= n; i++) {
-    result *= i;
+  // Use memoization for better performance with repeated calls
+  if (!factorial.cache) {
+    factorial.cache = new Map();
   }
   
+  // Check if we've already calculated this factorial
+  if (factorial.cache.has(num)) {
+    return factorial.cache.get(num);
+  }
+  
+  // For small numbers, use iterative approach
+  if (num <= 20) {
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+      result *= i;
+    }
+    
+    // Cache the result before returning
+    factorial.cache.set(num, result);
+    return result;
+  }
+  
+  // For larger numbers, use recursive approach with memoization
+  // Note: JavaScript has precision limitations for very large numbers
+  const result = num * factorial(num - 1);
+  factorial.cache.set(num, result);
   return result;
 }
 

@@ -11,7 +11,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `power(base, exponent)` - Calculates the power of a number
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
-- `factorial(n)` - Calculates the factorial of a non-negative integer
+- `factorial(n)` - Calculates the factorial of a non-negative integer with optimized performance
 
 ## Usage
 
@@ -30,5 +30,12 @@ console.log(mathUtils.squareRoot(16));   // 4
 Some functions include error handling:
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
-- `factorial(n)` throws an error if the input is negative or not an integer
+- `factorial(n)` throws specific errors:
+  - `TypeError` if the input is not a number or not an integer
+  - `RangeError` if the input is negative
+
+## Performance Optimizations
+
+- `factorial(n)` uses memoization to cache previously calculated results for better performance with repeated calls
+- For large values, appropriate algorithms are selected automatically
 
