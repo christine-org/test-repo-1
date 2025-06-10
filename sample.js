@@ -128,6 +128,42 @@ function average(numbers) {
   return sum / numbers.length;
 }
 
+/**
+ * Calculates the median of an array of numbers
+ * @param {number[]} numbers - Array of numbers
+ * @returns {number} The median of the numbers
+ * @throws {Error} If the array is empty or contains non-numeric values
+ */
+function median(numbers) {
+  if (!Array.isArray(numbers)) {
+    throw new Error('Input must be an array of numbers');
+  }
+  
+  if (numbers.length === 0) {
+    throw new Error('Cannot calculate median of an empty array');
+  }
+  
+  // Check if all elements are numbers
+  for (let i = 0; i < numbers.length; i++) {
+    if (typeof numbers[i] !== 'number') {
+      throw new Error('All elements in the array must be numbers');
+    }
+  }
+  
+  // Sort the array in ascending order
+  const sortedNumbers = [...numbers].sort((a, b) => a - b);
+  
+  const middle = Math.floor(sortedNumbers.length / 2);
+  
+  // If the array has an odd number of elements, return the middle element
+  if (sortedNumbers.length % 2 !== 0) {
+    return sortedNumbers[middle];
+  }
+  
+  // If the array has an even number of elements, return the average of the two middle elements
+  return (sortedNumbers[middle - 1] + sortedNumbers[middle]) / 2;
+}
+
 module.exports = {
   add,
   multiply,
@@ -137,5 +173,6 @@ module.exports = {
   squareRoot,
   absolute,
   factorial,
-  average
+  average,
+  median
 };
