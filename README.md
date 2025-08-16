@@ -13,6 +13,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `absolute(num)` - Calculates the absolute value of a number
 - `factorial(num)` - Calculates the factorial of a non-negative integer
 - `average(numbers)` - Calculates the average of an array of numbers
+- `modulo(a, b)` - Calculates the remainder when a is divided by b
 
 ## Usage
 
@@ -35,3 +36,4 @@ Some functions include error handling:
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
+- `modulo(a, b)` throws an error if the divisor is zero
