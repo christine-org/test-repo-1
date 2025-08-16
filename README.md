@@ -2,6 +2,7 @@
 
 This repository contains a collection of JavaScript utility functions for common mathematical operations.
 
+
 ## Available Functions
 
 - `add(a, b)` - Adds two numbers together
