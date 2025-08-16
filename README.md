@@ -2,6 +2,7 @@
 
 This repository contains a collection of JavaScript utility functions for common mathematical operations.
 
+
 ## Available Functions
 
 - `add(a, b)` - Adds two numbers together
@@ -13,6 +14,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `absolute(num)` - Calculates the absolute value of a number
 - `factorial(num)` - Calculates the factorial of a non-negative integer
 - `average(numbers)` - Calculates the average of an array of numbers
+- `modulus(a, b)` - Calculates the remainder when dividing the first number by the second
 
 ## Usage
 
@@ -26,6 +28,7 @@ console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
 console.log(mathUtils.average([1, 2, 3, 4, 5])); // 3
+console.log(mathUtils.modulus(10, 3));   // 1
 ```
 
 ## Error Handling
