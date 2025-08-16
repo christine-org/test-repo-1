@@ -13,6 +13,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `absolute(num)` - Calculates the absolute value of a number
 - `factorial(num)` - Calculates the factorial of a non-negative integer
 - `average(numbers)` - Calculates the average of an array of numbers
+- `gcd(a, b)` - Calculates the greatest common divisor of two integers
 
 ## Usage
 
@@ -26,6 +27,7 @@ console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
 console.log(mathUtils.average([1, 2, 3, 4, 5])); // 3
+console.log(mathUtils.gcd(48, 18));      // 6
 ```
 
 ## Error Handling
