@@ -35,3 +35,8 @@ Some functions include error handling:
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
