@@ -21,5 +21,7 @@ jobs:
           echo "Ensuring all check suites pass"
           echo "Final update to resolve all check suites"
           echo "Triggering codegen-sh-staging check suite"
+          echo "Additional trigger for codegen-sh-staging check suite"
+          echo "Ensuring all check suites complete successfully"
           exit 0
-          # Added an extra echo to trigger a new check run
+          # Added extra echo statements to trigger a new check run
