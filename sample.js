@@ -136,13 +136,16 @@ function average(numbers) {
  * @throws {Error} If inputs are not integers
  */
 function gcd(a, b) {
+  // Validate inputs are integers - GCD requires integer values
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('GCD is only defined for integers');
   }
   
+  // Use absolute values to handle negative inputs
   a = Math.abs(a);
   b = Math.abs(b);
   
+  // Euclidean algorithm for GCD calculation
   while (b !== 0) {
     const temp = b;
     b = a % b;
@@ -178,6 +181,7 @@ function lcm(a, b) {
  * @throws {Error} If input is not a positive integer
  */
 function isPrime(num) {
+  // This function checks if a number is prime using an optimized algorithm
   if (!Number.isInteger(num) || num <= 0) {
     throw new Error('Prime check is only defined for positive integers');
   }
@@ -217,4 +221,3 @@ module.exports = {
   lcm,
   isPrime
 };
-
