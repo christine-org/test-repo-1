@@ -136,20 +136,20 @@ function average(numbers) {
  * @throws {Error} If inputs are not integers
  */
 function gcd(a, b) {
-  // Validate inputs are integers
-  // GCD is only defined for integers
+  // Input validation: GCD is only defined for integers
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('Both inputs must be integers');
   }
   
   // Use absolute values since GCD is always positive
-  // GCD(a,b) = GCD(|a|,|b|)
+  // Mathematical property: GCD(a,b) = GCD(|a|,|b|)
   a = Math.abs(a);
   b = Math.abs(b);
   
   // Euclidean algorithm for finding GCD
   // This is an efficient algorithm dating back to Euclid's Elements (300 BC)
   // It's based on the principle that if a = bq + r, then gcd(a,b) = gcd(b,r)
+  // Time complexity: O(log(min(a,b)))
   while (b !== 0) {
     const temp = b;
     b = a % b;
@@ -167,8 +167,7 @@ function gcd(a, b) {
  * @throws {Error} If inputs are not integers
  */
 function lcm(a, b) {
-  // Validate inputs are integers
-  // LCM is only defined for integers
+  // Input validation: LCM is only defined for integers
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('Both inputs must be integers');
   }
@@ -179,10 +178,11 @@ function lcm(a, b) {
     return 0;
   }
   
-  // LCM = (a * b) / gcd(a, b)
-  // This formula uses the relationship between LCM and GCD:
+  // LCM calculation using the GCD
+  // Formula: LCM(a,b) = |a × b| / GCD(a,b)
+  // This formula uses the fundamental relationship between LCM and GCD:
   // LCM(a,b) × GCD(a,b) = |a × b|
-  // We use absolute values to ensure positive result
+  // We use absolute values to ensure a positive result
   return Math.abs(a * b) / gcd(a, b);
 }
 
@@ -193,47 +193,47 @@ function lcm(a, b) {
  * @throws {Error} If input is not a positive integer
  */
 function isPrime(num) {
-  // Validate input is a positive integer
+  // Input validation: Prime numbers are only defined for positive integers
   if (!Number.isInteger(num) || num <= 0) {
     throw new Error('Input must be a positive integer');
   }
   
-  // 1 is not a prime number by definition
+  // 1 is not a prime number by mathematical definition
   // A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers
   if (num === 1) {
     return false;
   }
   
-  // 2 and 3 are prime numbers
+  // Base cases: 2 and 3 are prime numbers
   if (num <= 3) {
     return true;
   }
   
-  // Quick check for divisibility by 2 or 3
-  // Any even number greater than 2 is not prime
+  // Optimization step 1: Quick check for divisibility by 2 or 3
+  // Any even number greater than 2 is not prime (divisible by 2)
   // Any number divisible by 3 is not prime
   if (num % 2 === 0 || num % 3 === 0) {
     return false;
   }
   
-  // Optimization: Check divisibility by numbers of form 6k±1 up to sqrt(num)
-  // Mathematical proof:
-  // 1. All primes greater than 3 can be expressed as 6k±1 for some integer k
-  //    This is because any number can be expressed as 6k + r where r is 0, 1, 2, 3, 4, or 5
-  //    If r is 0, 2, or 4, the number is divisible by 2
-  //    If r is 3, the number is divisible by 3
-  //    So only r = 1 or r = 5 (which is 6k-1) can be prime
-  // 2. We've already eliminated multiples of 2 and 3 above
-  // 3. We only need to check up to the square root of num because if num = a*b,
-  //    at least one of a or b must be ≤ sqrt(num)
-  // 4. This reduces the number of divisibility checks significantly
+  // Optimization step 2: Check divisibility by numbers of form 6k±1 up to sqrt(num)
+  // Mathematical proof and explanation:
+  // 1. All integers can be represented as (6k + i) for some integer k and i ∈ {0,1,2,3,4,5}
+  // 2. If i = 0, 2, or 4, the number is divisible by 2
+  // 3. If i = 3, the number is divisible by 3
+  // 4. Therefore, any prime number greater than 3 must be of form 6k+1 or 6k+5 (which is 6k-1)
+  // 5. We only need to check divisors up to √num because if num = a×b, at least one of a or b must be ≤ √num
+  // 6. By checking only numbers of form 6k±1, we reduce the number of divisibility tests by ~67%
+  //    compared to checking all numbers up to √num
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
+    // Check if num is divisible by i (form 6k-1) or i+2 (form 6k+1)
     if (num % i === 0 || num % (i + 2) === 0) {
       return false;
     }
   }
   
+  // If no divisors found, the number is prime
   return true;
 }
 
