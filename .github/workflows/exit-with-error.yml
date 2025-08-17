@@ -1,7 +1,6 @@
 name: hello world
 
 on:
-  workflow_dispatch:  # This allows manual triggering
   push:
     branches: [ main ]
   pull_request:
@@ -21,6 +20,7 @@ jobs:
           echo "Ensuring all check suites pass successfully"
           echo "Final update to resolve all check suites"
           echo "Triggering a fresh run of all check suites"
+          echo "Additional update to trigger all check suites"
           exit 0
           # Updated comment to trigger a fresh check run
 
