@@ -21,6 +21,6 @@ jobs:
           echo "Triggering fresh check runs for all check suites"
           # Ensure successful exit with status code 0
           exit 0
-# Updated comment to trigger a fresh run of all check suites - $(date +%Y-%m-%d-%H:%M:%S)
-# Adding additional comment to trigger a new check run
+# Updated timestamp to trigger a fresh run: 1724155875
+# This should trigger all check suites to run again
 
