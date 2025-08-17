@@ -1,7 +1,8 @@
 /**
  * Sample JavaScript file
  * 
- * This file contains a simple utility function for demonstration purposes.
+ * This file contains utility functions for mathematical operations.
+ * Added GCD, LCM, and isPrime functions to enhance the library.
  */
 
 /**
