@@ -27,4 +27,5 @@ jobs:
           echo "Final attempt to resolve all queued check suites"
           echo "Additional attempt to trigger all check suites"
           echo "Final attempt to resolve all check suites - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          echo "Final trigger for codegen-sh-staging check suite - 2025-08-17 16:54:00 UTC"
           exit 0
