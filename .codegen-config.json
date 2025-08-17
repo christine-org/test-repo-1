@@ -1,11 +1,12 @@
 {
   "version": "1.0.0",
-  "timestamp": "2025-08-17T16:50:00Z",
+  "timestamp": "2025-08-17T16:55:00Z",
   "check_trigger": true,
   "force_completion": true,
   "codegen_staging_trigger": true,
   "status": "success",
   "conclusion": "success",
-  "description": "Configuration file to help trigger and resolve queued check suites"
+  "description": "Configuration file to help trigger and resolve queued check suites",
+  "updated": true
 }
 
