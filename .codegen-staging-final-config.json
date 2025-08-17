@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "description": "Final configuration file for codegen-sh-staging check",
+  "settings": {
+    "enable_checks": true,
+    "auto_trigger": true,
+    "check_timeout": 600,
+    "retry_attempts": 3,
+    "force_trigger": true,
+    "timestamp": "2025-08-17T15:58:00Z",
+    "priority": "high"
+  }
+}
+
