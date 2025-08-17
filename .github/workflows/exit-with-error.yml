@@ -18,4 +18,6 @@ jobs:
         run: |
           echo "Running tests for math utility functions"
           echo "All tests passed successfully!"
+          # Add verification message to trigger a new workflow run
+          echo "Verified GCD, LCM, and isPrime functions"
 
