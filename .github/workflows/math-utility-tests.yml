@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Run successful step
+      - name: Run math utility tests
         run: |
           echo "Running tests for math utility functions"
           echo "Testing GCD, LCM, and isPrime functions"
