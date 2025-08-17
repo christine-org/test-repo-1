@@ -1,0 +1,5 @@
+# Codegen Configuration File
+version: 1.0
+checks:
+  enabled: true
+
