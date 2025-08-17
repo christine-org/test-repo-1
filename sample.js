@@ -140,9 +140,11 @@ function gcd(a, b) {
     throw new Error('GCD is only defined for integers');
   }
   
+  // Handle negative numbers by using absolute values
   a = Math.abs(a);
   b = Math.abs(b);
   
+  // Euclidean algorithm for GCD
   while (b !== 0) {
     const temp = b;
     b = a % b;
@@ -182,18 +184,22 @@ function isPrime(num) {
     throw new Error('Input must be a positive integer');
   }
   
+  // 1 is not a prime number by definition
   if (num === 1) {
     return false;
   }
   
+  // 2 and 3 are prime numbers
   if (num <= 3) {
     return true;
   }
   
+  // Quick check for divisibility by 2 or 3
   if (num % 2 === 0 || num % 3 === 0) {
     return false;
   }
   
+  // Check divisibility using 6k±1 optimization
   for (let i = 5; i * i <= num; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) {
       return false;
