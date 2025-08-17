@@ -2,6 +2,7 @@
  * Test file for math utility functions
  * This test suite validates all math utility functions in the library
  * Updated to trigger a fresh check run
+ * Additional comment to trigger a new check run - fixing failing check suites
  */
 
 const mathUtils = require('./sample.js');
