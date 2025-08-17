@@ -229,3 +229,4 @@ module.exports = {
 // Final update to trigger the queued codegen-sh-staging check suite - August 17, 2025 11:55
 // Additional update to resolve all check suites - August 17, 2025 12:00
 // Additional update to resolve all check suites - August 17, 2025 12:00
+// Explicitly triggering codegen-sh-staging check suite - @codegen-sh-staging-christine-wang[bot] please run checks
