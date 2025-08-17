@@ -4,8 +4,8 @@
   "settings": {
     "enable_checks": true,
     "auto_trigger": true,
-    "check_timeout": 300,
-    "last_updated": "2025-08-17T12:50:30Z"
+    "check_timeout": 600,
+    "retry_attempts": 3
   }
 }
 
