@@ -23,3 +23,4 @@ jobs:
 # This ensures all CI checks pass successfully
 # Additional comment to trigger a fresh check run
 
+# Updated to trigger a final check run for PR #143
