@@ -136,13 +136,16 @@ function average(numbers) {
  * @throws {Error} If inputs are not integers
  */
 function gcd(a, b) {
+  // Validate inputs are integers
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('GCD is only defined for integers');
   }
   
+  // Use absolute values to handle negative inputs
   a = Math.abs(a);
   b = Math.abs(b);
   
+  // Euclidean algorithm for GCD calculation
   while (b !== 0) {
     const temp = b;
     b = a % b;
