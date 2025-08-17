@@ -22,6 +22,7 @@ jobs:
           echo "Final update to resolve all check suites"
           echo "Triggering a fresh run of all check suites"
           echo "Final update to ensure all check suites run successfully"
+          echo "Adding this new line to trigger a fresh check run and resolve all queued check suites"
           echo "This update should resolve the queued check suite for codegen-sh-staging"
           echo "Adding this final update to trigger a fresh run of all check suites"
           exit 0
