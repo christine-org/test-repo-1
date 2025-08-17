@@ -206,8 +206,11 @@ function isPrime(num) {
   }
   
   // Optimization: Check divisibility by numbers of form 6k±1 up to sqrt(num)
-  // This is more efficient than checking all numbers from 2 to sqrt(num)
-  // because we've already eliminated multiples of 2 and 3
+  // This optimization works because:
+  // 1. All primes greater than 3 can be expressed as 6k±1 for some integer k
+  // 2. We've already eliminated multiples of 2 and 3 above
+  // 3. We only need to check up to the square root of num
+  // 4. This reduces the number of divisibility checks by roughly 2/3
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) {
