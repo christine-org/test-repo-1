@@ -128,6 +128,81 @@ function average(numbers) {
   return sum / numbers.length;
 }
 
+/**
+ * Calculates the greatest common divisor (GCD) of two integers
+ * @param {number} a - First integer
+ * @param {number} b - Second integer
+ * @returns {number} The greatest common divisor
+ * @throws {Error} If inputs are not integers
+ */
+function gcd(a, b) {
+  if (!Number.isInteger(a) || !Number.isInteger(b)) {
+    throw new Error('GCD is only defined for integers');
+  }
+  
+  a = Math.abs(a);
+  b = Math.abs(b);
+  
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  
+  return a;
+}
+
+/**
+ * Calculates the least common multiple (LCM) of two integers
+ * @param {number} a - First integer
+ * @param {number} b - Second integer
+ * @returns {number} The least common multiple
+ * @throws {Error} If inputs are not integers
+ */
+function lcm(a, b) {
+  if (!Number.isInteger(a) || !Number.isInteger(b)) {
+    throw new Error('LCM is only defined for integers');
+  }
+  
+  if (a === 0 || b === 0) {
+    return 0;
+  }
+  
+  return Math.abs(a * b) / gcd(a, b);
+}
+
+/**
+ * Checks if a number is prime
+ * @param {number} num - The number to check
+ * @returns {boolean} True if the number is prime, false otherwise
+ * @throws {Error} If input is not a positive integer
+ */
+function isPrime(num) {
+  if (!Number.isInteger(num) || num <= 0) {
+    throw new Error('Prime check is only defined for positive integers');
+  }
+  
+  if (num === 1) {
+    return false;
+  }
+  
+  if (num <= 3) {
+    return true;
+  }
+  
+  if (num % 2 === 0 || num % 3 === 0) {
+    return false;
+  }
+  
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
 module.exports = {
   add,
   multiply,
@@ -137,7 +212,9 @@ module.exports = {
   squareRoot,
   absolute,
   factorial,
-  average
+  average,
+  gcd,
+  lcm,
+  isPrime
 };
-// Triggering a fresh run of all check suites to resolve the queued codegen-sh-staging check
-// Triggering a fresh run of all check suites to resolve the queued codegen-sh-staging check
+
