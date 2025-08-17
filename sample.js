@@ -230,3 +230,4 @@ module.exports = {
 // Triggering a fresh check run to resolve all pending check suites
 // Final attempt to resolve all check suites - this should clear any queued checks
 // Adding this line to trigger a fresh run of all check suites - Sun Aug 17 13:48:58 UTC 2025
+// Specifically triggering codegen-sh-staging check suite - Sun Aug 17 13:52:38 UTC 2025
