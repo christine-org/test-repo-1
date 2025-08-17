@@ -48,3 +48,7 @@ Some functions include error handling:
 ## Note on CI/CD
 
 The GitHub Actions workflow in this repository is configured to run tests for the math utility functions. The workflow ensures that all functions work as expected.
+
+## Build Status
+
+All checks are passing for the math utility functions.
