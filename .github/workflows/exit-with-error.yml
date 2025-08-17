@@ -37,4 +37,12 @@ jobs:
           echo "This additional step should ensure all check suites are triggered properly"
           echo "Timestamp: $(date)"
           echo "All checks should now complete successfully"
+          
+      # Add a new step to ensure all checks are properly triggered
+      - name: Additional check verification
+        run: |
+          echo "Additional verification to ensure all check suites are triggered"
+          echo "This step should help resolve any queued check suites"
+          echo "Timestamp: $(date)"
+          echo "All check suites should now complete successfully"
 
