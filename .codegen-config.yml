@@ -1,0 +1,18 @@
+# Configuration for codegen-sh-staging check suite
+
+# This file is specifically created to configure and trigger the codegen-sh-staging check suite
+# The check suite appears to be stuck in a queued state, and this file is an attempt to force it to run
+
+version: "1.0"
+timestamp: "2025-08-17 17:50:30 UTC"
+
+# Explicitly target the codegen-sh-staging (Christine Wang) check suite
+target_check_suite: "codegen-sh-staging"
+
+# Force refresh of all check suites
+force_refresh: true
+
+# Additional configuration to ensure check suites complete
+check_suite_timeout: 60
+retry_attempts: 3
+
