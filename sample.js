@@ -5,7 +5,8 @@
  * All functions include proper error handling and comprehensive documentation.
  * The math utility functions are optimized for performance and include detailed
  * explanations of the algorithms used. Each function has been thoroughly tested
- * to ensure correctness and reliability.
+ * to ensure correctness and reliability. The implementation follows best practices
+ * for numerical computation in JavaScript.
  */
 
 /**
