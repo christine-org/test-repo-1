@@ -129,11 +129,15 @@ function average(numbers) {
 }
 
 /**
- * Calculates the greatest common divisor (GCD) of two integers
+ * Calculates the greatest common divisor (GCD) of two integers using the Euclidean algorithm
  * @param {number} a - First integer
  * @param {number} b - Second integer
  * @returns {number} The greatest common divisor
  * @throws {Error} If inputs are not integers
+ * @example
+ * gcd(12, 18); // returns 6
+ * gcd(7, 13);  // returns 1 (coprime numbers)
+ * gcd(0, 5);   // returns 5
  */
 function gcd(a, b) {
   // Input validation: GCD is only defined for integers
@@ -145,6 +149,15 @@ function gcd(a, b) {
   // Mathematical property: GCD(a,b) = GCD(|a|,|b|)
   a = Math.abs(a);
   b = Math.abs(b);
+  
+  // Special case: GCD(0,0) is conventionally defined as 0
+  if (a === 0 && b === 0) {
+    return 0;
+  }
+  
+  // Special case: GCD(0,b) = |b| and GCD(a,0) = |a| for b≠0, a≠0
+  if (a === 0) return b;
+  if (b === 0) return a;
   
   // Euclidean algorithm for finding GCD
   // This is an efficient algorithm dating back to Euclid's Elements (300 BC)
@@ -165,6 +178,10 @@ function gcd(a, b) {
  * @param {number} b - Second integer
  * @returns {number} The least common multiple
  * @throws {Error} If inputs are not integers
+ * @example
+ * lcm(4, 6);   // returns 12
+ * lcm(5, 7);   // returns 35
+ * lcm(0, 5);   // returns 0
  */
 function lcm(a, b) {
   // Input validation: LCM is only defined for integers
@@ -187,7 +204,7 @@ function lcm(a, b) {
 }
 
 /**
- * Checks if a number is prime
+ * Checks if a number is prime using an optimized algorithm
  * @param {number} num - The number to check
  * @returns {boolean} True if the number is prime, false otherwise
  * @throws {Error} If input is not a positive integer
@@ -195,6 +212,7 @@ function lcm(a, b) {
  * isPrime(17); // returns true
  * isPrime(4);  // returns false
  * isPrime(1);  // returns false (1 is not prime by definition)
+ * isPrime(2);  // returns true (smallest prime number)
  */
 function isPrime(num) {
   // Input validation: Prime numbers are only defined for positive integers
