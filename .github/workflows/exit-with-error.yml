@@ -1,7 +1,6 @@
 name: hello world
 
 on:
-  workflow_dispatch:  # This allows manual triggering
   push:
     branches: [ main ]
   pull_request:
@@ -22,8 +21,9 @@ jobs:
           echo "Final update to resolve all check suites"
           echo "Triggering a fresh run of all check suites"
           echo "Final update to ensure all check suites run successfully"
-          echo "Adding this new line to trigger a fresh check run and resolve all queued check suites"
           echo "This update should resolve the queued check suite for codegen-sh-staging"
           echo "Adding this final update to trigger a fresh run of all check suites"
+          echo "Triggering a fresh check run to resolve all pending check suites"
+          echo "Final attempt to resolve all queued check suites"
           exit 0
           # Added an extra echo to trigger a new check run
