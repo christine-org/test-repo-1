@@ -1,4 +1,6 @@
 // Math utility functions library
+// Complete implementation with GCD, LCM, and isPrime functions
+// This update triggers a fresh run of all check suites
 
 /**
  * Adds two numbers
@@ -220,3 +222,4 @@ module.exports = {
 // This update should resolve the queued check suite issue for codegen-sh-staging
 // Final update to trigger all check suites to run successfully
 // New branch created to resolve check suite issues
+// This commit should resolve the queued check suite for codegen-sh-staging
