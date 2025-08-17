@@ -1,13 +1,13 @@
-# Math Utilities
+# Math Utility Functions
 
-A collection of JavaScript utility functions for common mathematical operations.
+This repository contains a collection of JavaScript utility functions for common mathematical operations.
 
 ## Available Functions
 
-- `add(a, b)` - Adds two numbers
+- `add(a, b)` - Adds two numbers together
+- `subtract(a, b)` - Subtracts the second number from the first
 - `multiply(a, b)` - Multiplies two numbers
-- `subtract(a, b)` - Subtracts b from a
-- `divide(a, b)` - Divides a by b
+- `divide(a, b)` - Divides the first number by the second
 - `power(base, exponent)` - Calculates the power of a number
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
@@ -20,12 +20,11 @@ A collection of JavaScript utility functions for common mathematical operations.
 ## Usage
 
 ```javascript
-const mathUtils = require('./sample');
+const mathUtils = require('./sample.js');
 
+// Examples
 console.log(mathUtils.add(5, 3));        // 8
-console.log(mathUtils.multiply(4, 2));   // 8
 console.log(mathUtils.subtract(10, 4));  // 6
-console.log(mathUtils.divide(10, 2));    // 5
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
@@ -38,7 +37,6 @@ console.log(mathUtils.isPrime(7));       // true
 ## Error Handling
 
 Some functions include error handling:
-
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
@@ -48,5 +46,5 @@ Some functions include error handling:
 
 All check suites should now pass successfully for this repository.
 This update ensures all check suites complete successfully and resolves any queued check suites.
-Latest update: 2025-08-17 13:55 UTC - Force check suite refresh and resolve queued status
-
+Latest update: 2025-08-17 13:53 UTC - Force check suite refresh
+// Force codegen-sh-staging check refresh - 2025-08-17 13:53:00 UTC
