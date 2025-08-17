@@ -256,6 +256,7 @@ function isPrime(num) {
   //    compared to checking all numbers up to √num
   // 7. This optimization is based on the wheel factorization method with a wheel size of 6
   // 8. The time complexity of this algorithm is O(√n), which is significantly better than the naive O(n) approach
+  // 9. For very large numbers, more advanced primality tests like Miller-Rabin would be more efficient
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     // Check if num is divisible by i (form 6k-1) or i+2 (form 6k+1)
