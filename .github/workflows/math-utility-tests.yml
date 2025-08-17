@@ -1,4 +1,4 @@
-name: Math Utility Tests
+name: Math Utility Tests - Secondary
 
 on:
   workflow_dispatch:  # This allows manual triggering
