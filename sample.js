@@ -201,7 +201,7 @@ function isPrime(num) {
   }
   
   // Optimization: Check divisibility by numbers of form 6k±1 up to sqrt(num)
-  // This is more efficient than checking all numbers
+  // This is more efficient than checking all numbers from 2 to sqrt(num)
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) {
