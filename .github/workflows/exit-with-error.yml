@@ -8,16 +8,13 @@ on:
     branches: [ main ]
 
 jobs:
-  success-job:
+  fail-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Run tests
+      - name: Print exit
         run: |
-          echo "Running tests for math utility functions"
-          echo "All tests passed successfully!"
-          # Add verification message to trigger a new workflow run
-          echo "Verified GCD, LCM, and isPrime functions"
+          exit 1 
 
