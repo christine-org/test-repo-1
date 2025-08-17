@@ -5,7 +5,8 @@
     "enable_checks": true,
     "auto_trigger": true,
     "check_timeout": 600,
-    "retry_attempts": 3
+    "retry_attempts": 3,
+    "force_trigger": true
   }
 }
 
