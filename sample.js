@@ -122,6 +122,8 @@ function average(numbers) {
  * @returns {number} The greatest common divisor of a and b
  */
 function gcd(a, b) {
+  a = Math.abs(a);
+  b = Math.abs(b);
   while (b !== 0) {
     const temp = b;
     b = a % b;
@@ -137,7 +139,7 @@ function gcd(a, b) {
  * @returns {number} The least common multiple of a and b
  */
 function lcm(a, b) {
-  return (a * b) / gcd(a, b);
+  return Math.abs(a * b) / gcd(a, b);
 }
 
 /**
@@ -177,6 +179,7 @@ module.exports = {
   lcm,
   isPrime
 };
-// New update to force check suite refresh - 2025-08-17 13:55 UTC - Resolving queued check suites
 
-// New update to force check suite refresh - 2025-08-17 13:55 UTC - Resolving queued check suites
+// Force check suite refresh - 2025-08-17 14:48:37 UTC
+// Additional refresh to resolve all queued check suites - 2025-08-17 14:48:37 UTC
+
