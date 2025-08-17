@@ -200,11 +200,13 @@ function isPrime(num) {
   
   // 1 is not a prime number by definition in number theory
   // A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers
+  // This is a fundamental definition in number theory and mathematics
   if (num === 1) {
     return false;
   }
   
   // Base cases: 2 and 3 are prime numbers
+  // These are the smallest prime numbers and are handled separately for efficiency
   if (num <= 3) {
     return true;
   }
@@ -212,6 +214,7 @@ function isPrime(num) {
   // Optimization step 1: Quick check for divisibility by 2 or 3
   // Any even number greater than 2 is not prime (divisible by 2)
   // Any number divisible by 3 is not prime
+  // This early check eliminates a large set of composite numbers with minimal computation
   if (num % 2 === 0 || num % 3 === 0) {
     return false;
   }
@@ -225,6 +228,7 @@ function isPrime(num) {
   // 5. We only need to check divisors up to √num because if num = a×b, at least one of a or b must be ≤ √num
   // 6. By checking only numbers of form 6k±1, we reduce the number of divisibility tests by ~67%
   //    compared to checking all numbers up to √num
+  // 7. This optimization is based on the wheel factorization method with a wheel size of 6
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     // Check if num is divisible by i (form 6k-1) or i+2 (form 6k+1)
@@ -234,6 +238,8 @@ function isPrime(num) {
   }
   
   // If no divisors found, the number is prime
+  // At this point, we've verified that num is not divisible by any integer from 2 to √num
+  // By the fundamental theorem of arithmetic, this confirms that num is prime
   return true;
 }
 
