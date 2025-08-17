@@ -44,3 +44,38 @@ Some functions include error handling:
 - `gcd(a, b)` and `lcm(a, b)` throw errors if inputs are not integers
 - `isPrime(num)` throws an error if the input is not a positive integer
 
+## Advanced Examples
+
+### Greatest Common Divisor (GCD)
+```javascript
+// Find GCD of two numbers
+const gcdResult = mathUtils.gcd(48, 18);  // 6
+
+// GCD of coprime numbers
+const coprimeGcd = mathUtils.gcd(13, 7);  // 1
+
+// GCD with zero
+const gcdWithZero = mathUtils.gcd(0, 5);  // 5
+```
+
+### Least Common Multiple (LCM)
+```javascript
+// Find LCM of two numbers
+const lcmResult = mathUtils.lcm(4, 6);  // 12
+
+// LCM of coprime numbers
+const coprimeLcm = mathUtils.lcm(5, 7);  // 35
+
+// LCM with zero
+const lcmWithZero = mathUtils.lcm(0, 5);  // 0
+```
+
+### Prime Number Checking
+```javascript
+// Check if a number is prime
+mathUtils.isPrime(17);  // true
+mathUtils.isPrime(4);   // false
+mathUtils.isPrime(1);   // false (1 is not prime by definition)
+mathUtils.isPrime(2);   // true (smallest prime number)
+```
+
