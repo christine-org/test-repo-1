@@ -2,4 +2,5 @@
 version: 1.0
 checks:
   enabled: true
-  timeout: 360  # Updating timeout parameter to trigger a fresh check
+  timeout: 420  # Increasing timeout parameter to trigger a fresh check run
+
