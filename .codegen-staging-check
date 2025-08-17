@@ -1,0 +1,10 @@
+#!/bin/bash
+# This file is used to trigger the codegen-sh-staging check
+# Timestamp: 2025-08-17T14:49:01Z
+# Force: true
+# Priority: high
+# Check: codegen-sh-staging
+
+echo "Triggering codegen-sh-staging check"
+exit 0
+
