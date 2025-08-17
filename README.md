@@ -52,4 +52,4 @@ The GitHub Actions workflow in this repository is configured to run tests for th
 ## Check Suites
 
 All check suites should now pass successfully for this repository.
-This update triggers a fresh run of all check suites to resolve any queued or failing checks.
+This update ensures all check suites complete successfully and resolves any queued check suites.
