@@ -185,19 +185,23 @@ function isPrime(num) {
     throw new Error('Input must be a positive integer');
   }
   
+  // 1 is not a prime number
   if (num === 1) {
     return false;
   }
   
+  // 2 and 3 are prime numbers
   if (num <= 3) {
     return true;
   }
   
+  // Quick check for divisibility by 2 or 3
   if (num % 2 === 0 || num % 3 === 0) {
     return false;
   }
   
-  // Check divisibility by numbers of form 6k±1 up to sqrt(num)
+  // Optimization: Check divisibility by numbers of form 6k±1 up to sqrt(num)
+  // This is more efficient than checking all numbers
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) {

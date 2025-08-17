@@ -1,4 +1,4 @@
-name: hello world
+name: Math Utility Tests
 
 on:
   workflow_dispatch:  # This allows manual triggering
@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  success-job:
+  test-math-utils:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
