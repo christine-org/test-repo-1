@@ -131,6 +131,7 @@ function average(numbers) {
 
 /**
  * Calculates the greatest common divisor (GCD) of two integers
+ * Uses the Euclidean algorithm for efficient calculation
  * @param {number} a - First integer
  * @param {number} b - Second integer
  * @returns {number} The greatest common divisor
@@ -158,6 +159,7 @@ function gcd(a, b) {
 
 /**
  * Calculates the least common multiple (LCM) of two integers
+ * Uses the GCD function to calculate LCM efficiently
  * @param {number} a - First integer
  * @param {number} b - Second integer
  * @returns {number} The least common multiple
@@ -177,6 +179,7 @@ function lcm(a, b) {
 
 /**
  * Checks if a number is prime
+ * Uses an optimized algorithm to check primality
  * @param {number} num - The number to check
  * @returns {boolean} True if the number is prime, false otherwise
  * @throws {Error} If input is not a positive integer
