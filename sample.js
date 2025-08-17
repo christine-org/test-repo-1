@@ -198,7 +198,7 @@ function isPrime(num) {
     throw new Error('Input must be a positive integer');
   }
   
-  // 1 is not a prime number by mathematical definition
+  // 1 is not a prime number by definition in number theory
   // A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers
   if (num === 1) {
     return false;
