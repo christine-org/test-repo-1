@@ -36,5 +36,6 @@ Final update on 2025-08-17 11:55 to resolve all queued check suites.
 Last update on 2025-08-17 12:00 to clear all remaining check suites.
 New update on 2025-08-17 12:05 to resolve queued check suites.
 Triggering new check run on 2025-08-17 12:47 to clear all check suites.
-New update on 2025-08-17 13:00 to resolve all remaining queued check suites.
+Final update on 2025-08-17 12:51 to resolve all remaining check suites.
+New update on 2025-08-17 13:00 to resolve any remaining queued check suites.
 

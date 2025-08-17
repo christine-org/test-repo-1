@@ -30,8 +30,7 @@ jobs:
       
       - name: Force check suite completion
         run: |
-          echo "Forcing completion of all check suites"
+          echo "Forcing completion of all check suites - 2025-08-17 13:00"
           echo "This step ensures all check suites are properly marked as completed"
-          echo "Updated timestamp: 2025-08-17 13:00"
           exit 0
 
