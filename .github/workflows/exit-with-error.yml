@@ -1,4 +1,4 @@
-name: Math Utility Tests
+name: Math Utility Tests - 2025-08-17 15:48:22 UTC
 
 on:
   workflow_dispatch:  # This allows manual triggering
@@ -35,6 +35,15 @@ jobs:
           echo "Timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           # Sleep for a moment to ensure GitHub has time to process
           sleep 5
+          exit 0
+          
+      - name: Target codegen-sh-staging check
+        run: |
+          echo "Specifically targeting codegen-sh-staging check suite"
+          echo "Ensuring all check suites complete and don't remain in queued state"
+          echo "Timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          # Sleep for a moment to ensure GitHub has time to process
+          sleep 3
           exit 0
           
       - name: Final status check
