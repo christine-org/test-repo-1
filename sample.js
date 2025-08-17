@@ -144,7 +144,7 @@ function gcd(a, b) {
   a = Math.abs(a);
   b = Math.abs(b);
   
-  // Euclidean algorithm
+  // Euclidean algorithm for finding GCD
   while (b !== 0) {
     const temp = b;
     b = a % b;
