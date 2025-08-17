@@ -1,13 +1,14 @@
-# Math Utility Functions
+# Math Utilities
 
-This repository contains a collection of JavaScript utility functions for common mathematical operations.
+A collection of JavaScript utility functions for common mathematical operations.
 
-## Available Functions
+## Features
 
-- `add(a, b)` - Adds two numbers together
-- `subtract(a, b)` - Subtracts the second number from the first
+This repository contains a collection of JavaScript utility functions for common mathematical operations:
+
+- `add(a, b)` - Adds two numbers
 - `multiply(a, b)` - Multiplies two numbers
-- `divide(a, b)` - Divides the first number by the second
+- `subtract(a, b)` - Subtracts b from a
 - `power(base, exponent)` - Calculates the power of a number
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
@@ -20,11 +21,11 @@ This repository contains a collection of JavaScript utility functions for common
 ## Usage
 
 ```javascript
-const mathUtils = require('./sample.js');
+const mathUtils = require('./sample');
 
-// Examples
 console.log(mathUtils.add(5, 3));        // 8
-console.log(mathUtils.subtract(10, 4));  // 6
+console.log(mathUtils.subtract(5, 3));   // 2
+console.log(mathUtils.multiply(5, 3));   // 15
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
@@ -37,7 +38,7 @@ console.log(mathUtils.isPrime(7));       // true
 ## Error Handling
 
 Some functions include error handling:
-- `divide(a, b)` throws an error if the divisor is zero
+
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
@@ -46,4 +47,5 @@ Some functions include error handling:
 
 All check suites should now pass successfully for this repository.
 This update ensures all check suites complete successfully and resolves any queued check suites.
-Updated with fresh timestamp to trigger check runs: Sun Aug 17 12:54:30 UTC 2025.
+Updated with fresh timestamp to trigger check runs: Sun Aug 17 13:52:17 UTC 2025.
+
