@@ -53,5 +53,5 @@ The GitHub Actions workflow in this repository is configured to run tests for th
 
 All check suites should now pass successfully for this repository.
 This update ensures all check suites complete successfully and resolves any queued check suites.
-Additional update to trigger a fresh run of all check suites.
-New update to trigger fresh run of codegen-sh-staging check suite.
+Additional update to trigger a fresh run of the codegen-sh-staging check suite.
+New update to trigger fresh run of all check suites and resolve failing checks.
