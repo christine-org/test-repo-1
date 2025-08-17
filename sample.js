@@ -1,7 +1,8 @@
 /**
  * Sample JavaScript file
  * 
- * This file contains a simple utility function for demonstration purposes.
+ * This file contains utility functions for mathematical operations.
+ * All functions include proper error handling and comprehensive documentation.
  */
 
 /**
