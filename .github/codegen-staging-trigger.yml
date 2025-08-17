@@ -1,0 +1,14 @@
+# Codegen Staging Trigger Configuration
+# This file is used to trigger the codegen-sh-staging check
+
+trigger:
+  enabled: true
+  timestamp: "2025-08-17T12:50:00Z"
+  check_name: "codegen-sh-staging"
+  priority: high
+  
+settings:
+  auto_retry: true
+  timeout: 300
+  notify: true
+

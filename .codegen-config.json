@@ -6,14 +6,16 @@
     "auto_trigger": true,
     "check_timeout": 300,
     "retry_on_failure": true,
-    "notify_on_completion": true
+    "notify_on_completion": true,
+    "force_trigger": true
   },
   "check_settings": {
     "codegen-sh-staging": {
       "enabled": true,
-      "priority": "high"
+      "priority": "high",
+      "auto_retry": true
     }
   },
-  "last_updated": "2025-08-17T11:53:35Z"
+  "last_updated": "2025-08-17T12:50:00Z"
 }
 
