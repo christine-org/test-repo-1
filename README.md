@@ -1,37 +1,28 @@
 # Math Utility Functions
 
-This repository contains a collection of JavaScript utility functions for common mathematical operations.
+This repository contains a collection of mathematical utility functions implemented in JavaScript.
 
 ## Available Functions
 
-- `add(a, b)` - Adds two numbers together
-- `subtract(a, b)` - Subtracts the second number from the first
-- `multiply(a, b)` - Multiplies two numbers
-- `divide(a, b)` - Divides the first number by the second
-- `power(base, exponent)` - Calculates the power of a number
-- `squareRoot(num)` - Calculates the square root of a number
-- `absolute(num)` - Calculates the absolute value of a number
-- `factorial(num)` - Calculates the factorial of a non-negative integer
-- `average(numbers)` - Calculates the average of an array of numbers
+### Basic Operations
+- `add(a, b)` - Returns the sum of two numbers
+- `subtract(a, b)` - Returns the difference between two numbers
+- `multiply(a, b)` - Returns the product of two numbers
+- `divide(a, b)` - Returns the quotient of two numbers
 
-## Usage
-
-```javascript
-const mathUtils = require('./sample.js');
-
-// Examples
-console.log(mathUtils.add(5, 3));        // 8
-console.log(mathUtils.subtract(10, 4));  // 6
-console.log(mathUtils.power(2, 3));      // 8
-console.log(mathUtils.squareRoot(16));   // 4
-console.log(mathUtils.factorial(5));     // 120
-console.log(mathUtils.average([1, 2, 3, 4, 5])); // 3
-```
+### Advanced Operations
+- `power(base, exponent)` - Returns the base raised to the exponent
+- `squareRoot(num)` - Returns the square root of a number
+- `absolute(num)` - Returns the absolute value of a number
+- `factorial(num)` - Returns the factorial of a number
+- `average(numbers)` - Returns the average of an array of numbers
+- `gcd(a, b)` - Returns the greatest common divisor of two numbers
+- `lcm(a, b)` - Returns the least common multiple of two numbers
+- `isPrime(num)` - Checks if a number is prime
 
 ## Error Handling
 
 Some functions include error handling:
-- `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
@@ -44,3 +35,5 @@ Updated on 2025-08-17 11:45 to trigger fresh check runs.
 Final update on 2025-08-17 11:55 to resolve all queued check suites.
 Last update on 2025-08-17 12:00 to clear all remaining check suites.
 New update on 2025-08-17 12:05 to resolve queued check suites.
+Triggering new check run on 2025-08-17 12:47 to clear all check suites.
+
