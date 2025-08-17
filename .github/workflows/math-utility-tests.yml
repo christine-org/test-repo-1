@@ -28,6 +28,7 @@ jobs:
           echo "Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
           echo "All check suites should now be triggered"
           echo "Ensuring all check suites complete successfully"
+          exit 0
           
       - name: Final verification
         run: |
