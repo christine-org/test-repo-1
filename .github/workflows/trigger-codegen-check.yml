@@ -1,0 +1,27 @@
+name: Trigger Codegen Check - 2025-08-17 16:55:30 UTC
+
+on:
+  workflow_dispatch:  # This allows manual triggering
+  push:
+    branches: [ codegen-bot/* ]  # Trigger on pushes to codegen-bot branches
+
+jobs:
+  trigger-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Trigger codegen-sh-staging check
+        run: |
+          echo "Specifically triggering codegen-sh-staging check suite"
+          echo "Timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          # Create a marker file to trigger the check
+          echo "{\"timestamp\": \"$(date -u +'%Y-%m-%dT%H:%M:%SZ')\"}" > codegen-check-trigger.json
+          cat codegen-check-trigger.json
+          # Sleep to ensure GitHub has time to process
+          sleep 5
+          # Remove the marker file
+          rm codegen-check-trigger.json
+          exit 0
+

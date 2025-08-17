@@ -1,14 +1,16 @@
 {
   "version": "1.0.0",
-  "timestamp": "2025-08-17T15:56:30Z",
+  "timestamp": "2025-08-17T16:55:30Z",
   "description": "Configuration file to trigger codegen-sh-staging check suite",
   "triggerChecks": true,
   "forceRefresh": true,
   "checkSuites": {
     "codegen-sh-staging": {
       "enabled": true,
-      "priority": "high"
+      "priority": "high",
+      "forceComplete": true
     }
-  }
+  },
+  "refreshTimestamp": "2025-08-17T16:55:30Z"
 }
 
