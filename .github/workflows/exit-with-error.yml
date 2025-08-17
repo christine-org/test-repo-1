@@ -27,4 +27,3 @@ jobs:
           echo "All steps completed successfully"
           echo "Check suite should be marked as successful"
           exit 0
-
