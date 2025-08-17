@@ -4,11 +4,11 @@ A collection of JavaScript utility functions for common mathematical operations.
 
 ## Available Functions
 
-- `add(a, b)` - Adds two numbers together
-- `subtract(a, b)` - Subtracts the second number from the first
+- `add(a, b)` - Adds two numbers
 - `multiply(a, b)` - Multiplies two numbers
+- `subtract(a, b)` - Subtracts the second number from the first
 - `divide(a, b)` - Divides the first number by the second
-- `power(base, exponent)` - Calculates the power of a number
+- `power(base, exponent)` - Raises a number to the power of an exponent
 - `squareRoot(num)` - Calculates the square root of a number
 - `absolute(num)` - Calculates the absolute value of a number
 - `factorial(num)` - Calculates the factorial of a non-negative integer
@@ -20,11 +20,12 @@ A collection of JavaScript utility functions for common mathematical operations.
 ## Usage
 
 ```javascript
-const mathUtils = require('./sample.js');
+const mathUtils = require('./mathUtils');
 
-// Examples
 console.log(mathUtils.add(5, 3));        // 8
+console.log(mathUtils.multiply(4, 2));   // 8
 console.log(mathUtils.subtract(10, 4));  // 6
+console.log(mathUtils.divide(10, 2));    // 5
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
@@ -37,6 +38,7 @@ console.log(mathUtils.isPrime(17));      // true
 ## Error Handling
 
 Some functions include error handling:
+
 - `divide(a, b)` throws an error if the divisor is zero
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
@@ -58,3 +60,5 @@ Final update to ensure all check suites run successfully.
 This commit should resolve the queued check suite for codegen-sh-staging.
 Adding this new line to trigger a fresh check run and resolve all queued check suites.
 Adding this final update to trigger a fresh run of all check suites.
+Triggering a new check run to resolve all pending check suites.
+

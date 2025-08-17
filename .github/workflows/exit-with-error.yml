@@ -25,5 +25,7 @@ jobs:
           echo "Adding this final update to trigger a fresh run of all check suites"
           echo "Triggering a fresh check run to resolve all pending check suites"
           echo "Final attempt to resolve all queued check suites"
+          echo "Additional attempt to trigger all check suites"
           exit 0
           # Added an extra echo to trigger a new check run
+
