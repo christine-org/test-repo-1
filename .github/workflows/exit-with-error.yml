@@ -8,13 +8,34 @@ on:
     branches: [ main ]
 
 jobs:
-  fail-job:
+  success-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Print exit
+      - name: Run tests
         run: |
-          exit 1 
+          # Verify the math utility functions
+          node -e "
+            const utils = require('./sample.js');
+            
+            // Test GCD function
+            console.log('Testing GCD function...');
+            if (utils.gcd(12, 18) !== 6) throw new Error('GCD test failed');
+            console.log('GCD test passed!');
+            
+            // Test LCM function
+            console.log('Testing LCM function...');
+            if (utils.lcm(4, 6) !== 12) throw new Error('LCM test failed');
+            console.log('LCM test passed!');
+            
+            // Test isPrime function
+            console.log('Testing isPrime function...');
+            if (utils.isPrime(17) !== true) throw new Error('isPrime test failed for 17');
+            if (utils.isPrime(4) !== false) throw new Error('isPrime test failed for 4');
+            console.log('isPrime test passed!');
+            
+            console.log('All tests passed successfully!');
+          "
 
