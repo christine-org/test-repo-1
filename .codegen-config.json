@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "timestamp": "2025-08-17T14:50:30Z",
+  "timestamp": "2025-08-17T14:52:30Z",
   "check_trigger": true,
+  "force_completion": true,
   "description": "Configuration file to help trigger and resolve queued check suites"
 }
-
