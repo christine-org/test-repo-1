@@ -3,6 +3,8 @@
  * 
  * This file contains utility functions for mathematical operations.
  * All functions include proper error handling and comprehensive documentation.
+ * The math utility functions are optimized for performance and include detailed
+ * explanations of the algorithms used.
  */
 
 /**
