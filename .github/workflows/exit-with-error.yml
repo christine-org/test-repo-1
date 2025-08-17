@@ -21,4 +21,5 @@ jobs:
 
 # Fixed workflow to exit with code 0 instead of 1 to resolve failing check suites
 # This ensures all CI checks pass successfully
+# Additional comment to trigger a fresh check run
 
