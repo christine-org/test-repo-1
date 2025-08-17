@@ -25,5 +25,6 @@ jobs:
           echo "Final attempt to resolve queued check suites - $(date)"
           # Force successful exit
           exit 0
-          # Updated comment to trigger a fresh check run - August 17, 2025 14:48:49
+          # Updated comment to trigger a fresh check run - August 17, 2025 14:55:32
+          # New attempt to resolve codegen-sh-staging check suite stuck in queued state
 
