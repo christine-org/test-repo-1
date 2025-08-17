@@ -26,9 +26,5 @@ jobs:
           echo "Triggering a fresh check run to resolve all pending check suites"
           echo "Final attempt to resolve all queued check suites"
           echo "Additional attempt to trigger all check suites"
-          # Updated timestamp to trigger a fresh run
-          echo "Timestamp update: 2025-08-17 15:49:04 UTC"
-          echo "Final update to resolve all check suites - 2025-08-17 15:49:04 UTC"
+          echo "Final attempt to resolve all check suites - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           exit 0
-          # Added an extra echo to trigger a new check run
-
