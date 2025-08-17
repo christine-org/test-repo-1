@@ -191,6 +191,10 @@ function lcm(a, b) {
  * @param {number} num - The number to check
  * @returns {boolean} True if the number is prime, false otherwise
  * @throws {Error} If input is not a positive integer
+ * @example
+ * isPrime(17); // returns true
+ * isPrime(4);  // returns false
+ * isPrime(1);  // returns false (1 is not prime by definition)
  */
 function isPrime(num) {
   // Input validation: Prime numbers are only defined for positive integers
