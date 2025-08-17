@@ -21,6 +21,7 @@ jobs:
           echo "Final update to resolve all check suites"
           echo "Triggering a fresh run of all check suites"
           echo "Additional update to trigger all check suites"
-          echo "New commit to resolve remaining queued check suites"
+          echo "Final update to clear all queued check suites"
           exit 0
           # Updated comment to trigger a fresh check run
+
