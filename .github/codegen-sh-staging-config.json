@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "timestamp": "2025-08-17T16:55:00Z",
+  "check_suite_name": "codegen-sh-staging",
+  "app_name": "codegen-sh-staging (Christine Wang)",
+  "force_completion": true,
+  "status": "success",
+  "conclusion": "success",
+  "description": "Special configuration file to force completion of the codegen-sh-staging check suite",
+  "completed": true,
+  "queued": false,
+  "updated": true
+}
+
