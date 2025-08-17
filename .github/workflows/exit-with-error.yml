@@ -1,7 +1,6 @@
 name: hello world
 
 on:
-  workflow_dispatch:  # This allows manual triggering
   push:
     branches: [ main ]
   pull_request:
@@ -24,5 +23,6 @@ jobs:
           echo "New update to trigger fresh check runs (2025-08-17)"
           echo "Updated workflow to ensure successful completion"
           echo "New update to trigger fresh check runs for all check suites (2025-08-17 11:55)"
+          echo "New update to trigger fresh check runs for all check suites (2025-08-17 12:55)"
           exit 0
 
