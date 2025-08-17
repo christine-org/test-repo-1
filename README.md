@@ -41,6 +41,9 @@ Some functions include error handling:
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
+- `gcd(a, b)` throws an error if inputs are not integers
+- `lcm(a, b)` throws an error if inputs are not integers
+- `isPrime(num)` throws an error if input is not a positive integer
 
 ## Note on CI/CD
 
