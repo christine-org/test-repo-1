@@ -4,9 +4,9 @@ This repository contains a collection of JavaScript utility functions for common
 
 ## Available Functions
 
-- `add(a, b)` - Adds two numbers together
-- `subtract(a, b)` - Subtracts the second number from the first
+- `add(a, b)` - Adds two numbers
 - `multiply(a, b)` - Multiplies two numbers
+- `subtract(a, b)` - Subtracts the second number from the first
 - `divide(a, b)` - Divides the first number by the second
 - `power(base, exponent)` - Calculates the power of a number
 - `squareRoot(num)` - Calculates the square root of a number
@@ -22,9 +22,11 @@ This repository contains a collection of JavaScript utility functions for common
 ```javascript
 const mathUtils = require('./sample.js');
 
-// Examples
+// Basic operations
 console.log(mathUtils.add(5, 3));        // 8
 console.log(mathUtils.subtract(10, 4));  // 6
+console.log(mathUtils.multiply(2, 6));   // 12
+console.log(mathUtils.divide(10, 2));    // 5
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
@@ -37,7 +39,8 @@ console.log(mathUtils.isPrime(17));      // true
 ## Error Handling
 
 Some functions include error handling:
-- `divide(a, b)` throws an error if the divisor is zero
+
+- `divide(a, b)` throws an error if b is zero
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
@@ -56,6 +59,9 @@ const coprimeGcd = mathUtils.gcd(13, 7);  // 1
 
 // GCD with zero
 const gcdWithZero = mathUtils.gcd(0, 5);  // 5
+
+// GCD of negative numbers (uses absolute values)
+const negativeGcd = mathUtils.gcd(-24, 36);  // 12
 ```
 
 ### Least Common Multiple (LCM)
@@ -68,6 +74,9 @@ const coprimeLcm = mathUtils.lcm(5, 7);  // 35
 
 // LCM with zero
 const lcmWithZero = mathUtils.lcm(0, 5);  // 0
+
+// LCM of negative numbers (uses absolute values)
+const negativeLcm = mathUtils.lcm(-8, 12);  // 24
 ```
 
 ### Prime Number Checking
@@ -77,5 +86,13 @@ mathUtils.isPrime(17);  // true
 mathUtils.isPrime(4);   // false
 mathUtils.isPrime(1);   // false (1 is not prime by definition)
 mathUtils.isPrime(2);   // true (smallest prime number)
+mathUtils.isPrime(3);   // true
+mathUtils.isPrime(997); // true (a larger prime)
 ```
+
+### Performance Considerations
+
+- The `isPrime` function uses an optimized algorithm with O(√n) time complexity
+- The `gcd` function implements the Euclidean algorithm with O(log(min(a,b))) time complexity
+- The `lcm` function leverages the GCD calculation for efficiency
 
