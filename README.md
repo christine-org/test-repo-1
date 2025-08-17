@@ -47,4 +47,4 @@ Some functions include error handling:
 
 ## Note on CI/CD
 
-The GitHub Actions workflow in this repository is configured to intentionally fail with `exit 1`. This is expected behavior and does not indicate an issue with the code itself.
+The GitHub Actions workflow in this repository is configured to run tests for the math utility functions. The workflow ensures that all functions work as expected.
