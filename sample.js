@@ -251,6 +251,7 @@ function isPrime(num) {
   // 6. By checking only numbers of form 6k±1, we reduce the number of divisibility tests by ~67%
   //    compared to checking all numbers up to √num
   // 7. This optimization is based on the wheel factorization method with a wheel size of 6
+  // 8. The time complexity of this algorithm is O(√n), which is significantly better than the naive O(n) approach
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     // Check if num is divisible by i (form 6k-1) or i+2 (form 6k+1)
