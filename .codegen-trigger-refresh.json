@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "timestamp": "2025-08-17T17:51:00Z",
+  "description": "New trigger file to force refresh of codegen-sh-staging check suite",
+  "triggerChecks": true,
+  "forceRefresh": true,
+  "checkSuites": {
+    "codegen-sh-staging": {
+      "enabled": true,
+      "priority": "critical",
+      "forceComplete": true,
+      "skipQueue": true
+    }
+  },
+  "refreshTimestamp": "2025-08-17T17:51:00Z",
+  "attempt": "final-refresh-attempt"
+}
+
