@@ -217,4 +217,4 @@ module.exports = {
   lcm,
   isPrime
 };
-// Math utility functions complete
+// Math utility functions library complete with GCD, LCM, and isPrime functions
