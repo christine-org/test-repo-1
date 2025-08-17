@@ -206,6 +206,14 @@ function isPrime(num) {
   // This is more efficient than checking all numbers from 2 to sqrt(num)
   // We only need to check up to the square root because if num is divisible by a number > sqrt(num),
   // it must also be divisible by a number < sqrt(num)
+  // 
+  // Why 6k±1? All primes greater than 3 can be expressed in the form 6k±1
+  // This is because:
+  // - Any number of form 6k is divisible by 2 and 3
+  // - Any number of form 6k+2 is divisible by 2
+  // - Any number of form 6k+3 is divisible by 3
+  // - Any number of form 6k+4 is divisible by 2
+  // - Only numbers of form 6k+1 and 6k+5 (which is 6k-1) need to be checked
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) {
