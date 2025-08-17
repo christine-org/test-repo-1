@@ -41,3 +41,7 @@ Some functions include error handling:
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
+
+## Note on CI/CD
+
+The GitHub Actions workflow in this repository is configured to intentionally fail with `exit 1`. This is expected behavior and does not indicate an issue with the code itself.
