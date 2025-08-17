@@ -136,6 +136,7 @@ function average(numbers) {
  * @throws {Error} If inputs are not integers
  */
 function gcd(a, b) {
+  // Validate inputs are integers
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('Both inputs must be integers');
   }
@@ -162,6 +163,7 @@ function gcd(a, b) {
  * @throws {Error} If inputs are not integers
  */
 function lcm(a, b) {
+  // Validate inputs are integers
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('Both inputs must be integers');
   }
@@ -183,11 +185,12 @@ function lcm(a, b) {
  * @throws {Error} If input is not a positive integer
  */
 function isPrime(num) {
+  // Validate input is a positive integer
   if (!Number.isInteger(num) || num <= 0) {
     throw new Error('Input must be a positive integer');
   }
   
-  // 1 is not a prime number
+  // 1 is not a prime number by definition
   if (num === 1) {
     return false;
   }
@@ -204,8 +207,7 @@ function isPrime(num) {
   
   // Optimization: Check divisibility by numbers of form 6k±1 up to sqrt(num)
   // This is more efficient than checking all numbers from 2 to sqrt(num)
-  // We only need to check up to the square root because if num is divisible by a number > sqrt(num),
-  // it must also be divisible by a number < sqrt(num)
+  // because we've already eliminated multiples of 2 and 3
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) {
