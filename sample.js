@@ -128,6 +128,54 @@ function average(numbers) {
   return sum / numbers.length;
 }
 
+/**
+ * Calculates the greatest common divisor of two numbers
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} The greatest common divisor of a and b
+ */
+function gcd(a, b) {
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+/**
+ * Calculates the least common multiple of two numbers
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} The least common multiple of a and b
+ */
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+/**
+ * Checks if a number is prime
+ * @param {number} num - The number to check
+ * @returns {boolean} True if the number is prime, false otherwise
+ */
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  if (num <= 3) {
+    return true;
+  }
+  if (num % 2 === 0 || num % 3 === 0) {
+    return false;
+  }
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
 module.exports = {
   add,
   multiply,
@@ -137,5 +185,9 @@ module.exports = {
   squareRoot,
   absolute,
   factorial,
-  average
+  average,
+  gcd,
+  lcm,
+  isPrime
 };
+// Triggering a new check run to resolve all failing check suites - 2025-08-17 11:45

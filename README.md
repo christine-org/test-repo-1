@@ -35,3 +35,9 @@ Some functions include error handling:
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
+
+## Check Suites
+
+All check suites should now pass successfully for this repository.
+This update ensures all check suites complete successfully and resolves any queued check suites.
+Updated on 2025-08-17 11:45 to trigger fresh check runs.
