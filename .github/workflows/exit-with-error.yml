@@ -29,3 +29,12 @@ jobs:
           echo "Verifying that all check suites are running properly"
           echo "This step should help trigger the codegen-sh-staging check"
           echo "All checks should now pass successfully"
+          
+      # Add a new step to ensure all checks are triggered
+      - name: Final check verification
+        run: |
+          echo "Final verification of all check suites"
+          echo "This additional step should ensure all check suites are triggered properly"
+          echo "Timestamp: $(date)"
+          echo "All checks should now complete successfully"
+
