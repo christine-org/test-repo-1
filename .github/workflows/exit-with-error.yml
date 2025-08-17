@@ -2,9 +2,9 @@ name: Math Utility Tests
 
 on:
   workflow_dispatch:  # This allows manual triggering
-  push:
-    branches: [ main ]
   pull_request:
+    branches: [ main ]
+  push:
     branches: [ main ]
 
 jobs:
@@ -23,7 +23,8 @@ jobs:
           
       - name: Trigger check suite update
         run: |
-          echo "Triggering check suite update - 2025-08-17 11:45"
+          echo "Triggering check suite update - 2025-08-17 11:55"
           echo "All checks should now pass successfully"
+          echo "Final update to resolve queued check suites"
           exit 0
 
