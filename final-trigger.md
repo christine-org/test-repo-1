@@ -1,18 +1,17 @@
 # Final Check Suite Trigger
 
-This file is created as a final attempt to trigger all check suites to run properly.
-
-## Purpose
-
-- Trigger the codegen-sh-staging check suite that is currently in a "queued" state
-- Ensure all check suites complete successfully
-- Resolve any issues with the PR check suites
-
-## Note
-
-Sometimes check suites can remain in a "queued" state due to infrastructure issues or other factors outside of our control. This PR has successfully fixed the GitHub Actions workflow to exit with code 0 (success), which was the primary issue in PR #93.
+This file is created as a final attempt to trigger the codegen-sh-staging check suite.
 
 ## Timestamp
 
-Last updated: August 17, 2025 11:53
+Last updated: August 17, 2025 12:50:00
+
+## Purpose
+
+- Force the codegen-sh-staging check to transition from "queued" to "in_progress"
+- Ensure all check suites complete successfully
+
+## Note
+
+Sometimes check suites can get stuck in a "queued" state and need a fresh commit to trigger them to run properly. This file is created for that purpose.
 
