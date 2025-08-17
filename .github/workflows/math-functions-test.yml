@@ -21,4 +21,4 @@ jobs:
           echo "Triggering fresh check runs for all check suites"
           # Ensure successful exit with comment
           exit 0
-# This is a comment to trigger a fresh run of the checks
+# Updated comment to trigger a fresh run of the checks
