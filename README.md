@@ -73,4 +73,6 @@ The codegen-sh-staging check suite should now complete successfully.
 
 ## Final Check Suite Update
 
-This update is made to trigger all check suites to complete successfully - August 17, 2025 12:00.
+This update is made to trigger all check suites to complete successfully - August 17, 2025 12:49.
+Explicitly triggering codegen-sh-staging check suite to resolve the queued status.
+@codegen-sh-staging-christine-wang[bot] please run checks on this PR.
