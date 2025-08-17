@@ -1,4 +1,5 @@
-// Final trigger to resolve all check suites - 2025-08-17 15:02:00 UTC
-// This should resolve the queued check suite for codegen-sh-staging
-// Adding this file to trigger a fresh run of all check suites
+// Final attempt to trigger a fresh run of all check suites
+// Specifically targeting the codegen-sh-staging check suite
+// Timestamp: 2025-08-17 15:05:00 UTC
+// This update should resolve all queued check suites
 
