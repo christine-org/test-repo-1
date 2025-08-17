@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "description": "Configuration file for codegen-sh-staging integration",
+  "settings": {
+    "enable_checks": true,
+    "auto_trigger": true,
+    "check_timeout": 300
+  },
+  "last_updated": "2025-08-17T11:48:35Z"
+}
+
