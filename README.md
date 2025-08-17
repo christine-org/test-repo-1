@@ -4,9 +4,9 @@ This repository contains a collection of JavaScript utility functions for common
 
 ## Available Functions
 
-- `add(a, b)` - Adds two numbers together
-- `subtract(a, b)` - Subtracts the second number from the first
+- `add(a, b)` - Adds two numbers
 - `multiply(a, b)` - Multiplies two numbers
+- `subtract(a, b)` - Subtracts the second number from the first
 - `divide(a, b)` - Divides the first number by the second
 - `power(base, exponent)` - Calculates the power of a number
 - `squareRoot(num)` - Calculates the square root of a number
@@ -20,11 +20,12 @@ This repository contains a collection of JavaScript utility functions for common
 ## Usage
 
 ```javascript
-const mathUtils = require('./sample.js');
+const mathUtils = require('./path/to/mathUtils');
 
-// Examples
 console.log(mathUtils.add(5, 3));        // 8
+console.log(mathUtils.multiply(4, 2));   // 8
 console.log(mathUtils.subtract(10, 4));  // 6
+console.log(mathUtils.divide(10, 2));    // 5
 console.log(mathUtils.power(2, 3));      // 8
 console.log(mathUtils.squareRoot(16));   // 4
 console.log(mathUtils.factorial(5));     // 120
@@ -46,5 +47,5 @@ Some functions include error handling:
 
 All check suites should now pass successfully for this repository.
 This update ensures all check suites complete successfully and resolves any queued check suites.
-Latest update: 2025-08-17 13:53 UTC - Force check suite refresh
-// Force codegen-sh-staging check refresh - 2025-08-17 13:53:00 UTC
+Latest update: 2025-08-17 14:55 UTC - Force check suite refresh
+// Force codegen-sh-staging check refresh - 2025-08-17 14:55:00 UTC
