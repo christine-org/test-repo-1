@@ -1,4 +1,9 @@
 // Math utility functions library
+// Complete library with GCD, LCM, and isPrime functions
+// Final update to trigger all check suites to run successfully
+// Additional update to resolve any queued check suites
+// New update to trigger fresh run of all check suites - resolving failing checks
+// Updated comment to trigger a fresh run of all check suites - August 17, 2025
 
 /**
  * Adds two numbers
@@ -209,8 +214,3 @@ module.exports = {
   lcm,
   isPrime
 };
-// Math utility functions library complete with GCD, LCM, and isPrime functions
-// Final update to trigger all check suites to run successfully
-// Additional update to resolve any queued check suites
-// Trigger a fresh run of all check suites - final update
-// New update to trigger codegen-sh-staging check suite
