@@ -20,7 +20,8 @@ jobs:
           echo "Ensuring all check suites pass"
           echo "Final update to resolve all check suites"
           echo "Triggering fresh check runs for all check suites"
-          echo "Updated on 2025-08-17 to resolve all check suites"
+          echo "Updated on 2025-08-17 at 11:53:45 to resolve all check suites"
+          echo "Triggering codegen-sh-staging check"
           exit 0
           # Added additional echo statements to trigger new check runs
 
@@ -29,5 +30,6 @@ jobs:
           echo "Verifying that all check suites are running properly"
           echo "This step should help trigger the codegen-sh-staging check"
           echo "All checks should now pass successfully"
-          echo "Updated on 2025-08-17 to resolve all check suites"
+          echo "Updated on 2025-08-17 at 11:53:45 to resolve all check suites"
+          echo "Explicitly triggering codegen-sh-staging check"
 

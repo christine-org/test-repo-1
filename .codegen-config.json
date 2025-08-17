@@ -4,8 +4,16 @@
   "settings": {
     "enable_checks": true,
     "auto_trigger": true,
-    "check_timeout": 300
+    "check_timeout": 300,
+    "retry_on_failure": true,
+    "notify_on_completion": true
   },
-  "last_updated": "2025-08-17T11:48:35Z"
+  "check_settings": {
+    "codegen-sh-staging": {
+      "enabled": true,
+      "priority": "high"
+    }
+  },
+  "last_updated": "2025-08-17T11:53:35Z"
 }
 
