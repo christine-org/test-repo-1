@@ -226,5 +226,4 @@ module.exports = {
 // Triggering a new check run to resolve the queued codegen-sh-staging check
 // Final update to trigger fresh check runs for all check suites including codegen-sh-staging
 // Triggering a fresh check run for all check suites - final fix
-// Triggering a new check run to resolve all failing check suites - final attempt
-// Final fix to trigger fresh check runs for all check suites - resolving queued state
+// Final attempt to trigger the codegen-sh-staging check
