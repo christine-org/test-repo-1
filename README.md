@@ -13,6 +13,7 @@ This repository contains a collection of JavaScript utility functions for common
 - `absolute(num)` - Calculates the absolute value of a number
 - `factorial(num)` - Calculates the factorial of a non-negative integer
 - `average(numbers)` - Calculates the average of an array of numbers
+- `modulo(a, b)` - Calculates the remainder when dividing the first number by the second
 
 ## Usage
 
