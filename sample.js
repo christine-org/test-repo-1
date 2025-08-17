@@ -166,11 +166,13 @@ function lcm(a, b) {
     throw new Error('Both inputs must be integers');
   }
   
+  // Special case: if either number is 0, LCM is 0
   if (a === 0 || b === 0) {
     return 0;
   }
   
   // LCM = (a * b) / gcd(a, b)
+  // We use absolute values to ensure positive result
   return Math.abs(a * b) / gcd(a, b);
 }
 
@@ -185,7 +187,7 @@ function isPrime(num) {
     throw new Error('Input must be a positive integer');
   }
   
-  // 1 is not a prime number
+  // 1 is not a prime number by definition
   if (num === 1) {
     return false;
   }
@@ -202,6 +204,7 @@ function isPrime(num) {
   
   // Optimization: Check divisibility by numbers of form 6k±1 up to sqrt(num)
   // This is more efficient than checking all numbers from 2 to sqrt(num)
+  // because we've already eliminated multiples of 2 and 3
   const sqrtNum = Math.sqrt(num);
   for (let i = 5; i <= sqrtNum; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) {
