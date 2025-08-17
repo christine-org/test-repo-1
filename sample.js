@@ -136,6 +136,7 @@ function average(numbers) {
  * @throws {Error} If inputs are not integers
  */
 function gcd(a, b) {
+  // Validate inputs are integers
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('Both inputs must be integers');
   }
@@ -162,6 +163,7 @@ function gcd(a, b) {
  * @throws {Error} If inputs are not integers
  */
 function lcm(a, b) {
+  // Validate inputs are integers
   if (!Number.isInteger(a) || !Number.isInteger(b)) {
     throw new Error('Both inputs must be integers');
   }
@@ -183,11 +185,12 @@ function lcm(a, b) {
  * @throws {Error} If input is not a positive integer
  */
 function isPrime(num) {
+  // Validate input is a positive integer
   if (!Number.isInteger(num) || num <= 0) {
     throw new Error('Input must be a positive integer');
   }
   
-  // 1 is not a prime number
+  // 1 is not a prime number by definition
   if (num === 1) {
     return false;
   }
