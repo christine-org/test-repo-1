@@ -96,3 +96,38 @@ mathUtils.isPrime(997); // true (a larger prime)
 - The `gcd` function implements the Euclidean algorithm with O(log(min(a,b))) time complexity
 - The `lcm` function leverages the GCD calculation for efficiency
 
+## Implementation Details
+
+### GCD Implementation
+The Greatest Common Divisor is implemented using the Euclidean algorithm, which has been known since ancient times. The algorithm works by repeatedly applying the division algorithm and has a logarithmic time complexity.
+
+### LCM Implementation
+The Least Common Multiple is calculated using the relationship between LCM and GCD:
+```
+LCM(a,b) = |a × b| / GCD(a,b)
+```
+This approach is more efficient than finding the LCM directly.
+
+### Prime Number Testing
+The primality test uses the 6k±1 optimization, which significantly reduces the number of divisibility checks needed. This is based on the observation that all primes greater than 3 can be expressed in the form 6k±1.
+
+## Contributing
+
+Contributions to improve the library are welcome! Here are some ways you can contribute:
+
+1. Add new mathematical functions
+2. Improve the performance of existing algorithms
+3. Enhance documentation and examples
+4. Add more comprehensive tests
+
+Please ensure that any new functions include:
+- Proper JSDoc documentation
+- Appropriate error handling
+- Unit tests
+
+To contribute, please:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
