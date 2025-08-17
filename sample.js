@@ -214,6 +214,7 @@ function lcm(a, b) {
  * isPrime(4);  // returns false
  * isPrime(1);  // returns false (1 is not prime by definition)
  * isPrime(2);  // returns true (smallest prime number)
+ * isPrime(997); // returns true (a larger prime)
  */
 function isPrime(num) {
   // Input validation: Prime numbers are only defined for positive integers
