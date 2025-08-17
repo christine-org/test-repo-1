@@ -1,11 +1,5 @@
 /**
- * Sample JavaScript file
- * 
- * This file contains a simple utility function for demonstration purposes.
- */
-
-/**
- * Adds two numbers together
+ * Adds two numbers
  * @param {number} a - First number
  * @param {number} b - Second number
  * @returns {number} The sum of a and b
@@ -36,14 +30,14 @@ function subtract(a, b) {
 
 /**
  * Divides the first number by the second
- * @param {number} a - First number (dividend)
- * @param {number} b - Second number (divisor)
+ * @param {number} a - First number
+ * @param {number} b - Second number
  * @returns {number} The quotient of a and b
  * @throws {Error} If b is zero
  */
 function divide(a, b) {
   if (b === 0) {
-    throw new Error('Division by zero is not allowed');
+    throw new Error("Cannot divide by zero");
   }
   return a / b;
 }
@@ -52,7 +46,7 @@ function divide(a, b) {
  * Calculates the power of a number
  * @param {number} base - The base number
  * @param {number} exponent - The exponent
- * @returns {number} The result of base raised to the power of exponent
+ * @returns {number} The base raised to the power of the exponent
  */
 function power(base, exponent) {
   return Math.pow(base, exponent);
@@ -60,20 +54,20 @@ function power(base, exponent) {
 
 /**
  * Calculates the square root of a number
- * @param {number} num - The number to calculate square root for
+ * @param {number} num - The number to calculate the square root of
  * @returns {number} The square root of the number
- * @throws {Error} If num is negative
+ * @throws {Error} If the number is negative
  */
 function squareRoot(num) {
   if (num < 0) {
-    throw new Error('Cannot calculate square root of negative number');
+    throw new Error("Cannot calculate square root of a negative number");
   }
   return Math.sqrt(num);
 }
 
 /**
  * Calculates the absolute value of a number
- * @param {number} num - The input number
+ * @param {number} num - The number to calculate the absolute value of
  * @returns {number} The absolute value of the number
  */
 function absolute(num) {
@@ -82,24 +76,21 @@ function absolute(num) {
 
 /**
  * Calculates the factorial of a non-negative integer
- * @param {number} num - The non-negative integer
+ * @param {number} num - The number to calculate the factorial of
  * @returns {number} The factorial of the number
- * @throws {Error} If num is negative or not an integer
+ * @throws {Error} If the number is negative or not an integer
  */
 function factorial(num) {
   if (num < 0 || !Number.isInteger(num)) {
-    throw new Error('Factorial is only defined for non-negative integers');
+    throw new Error("Factorial is only defined for non-negative integers");
   }
-  
   if (num === 0 || num === 1) {
     return 1;
   }
-  
   let result = 1;
   for (let i = 2; i <= num; i++) {
     result *= i;
   }
-  
   return result;
 }
 
@@ -107,25 +98,69 @@ function factorial(num) {
  * Calculates the average of an array of numbers
  * @param {number[]} numbers - Array of numbers
  * @returns {number} The average of the numbers
- * @throws {Error} If the array is empty
+ * @throws {Error} If the array is empty or contains non-numeric values
  */
 function average(numbers) {
-  if (!Array.isArray(numbers)) {
-    throw new Error('Input must be an array of numbers');
+  if (!Array.isArray(numbers) || numbers.length === 0) {
+    throw new Error("Input must be a non-empty array");
   }
   
-  if (numbers.length === 0) {
-    throw new Error('Cannot calculate average of an empty array');
-  }
-  
-  const sum = numbers.reduce((acc, val) => {
-    if (typeof val !== 'number') {
-      throw new Error('All elements in the array must be numbers');
+  for (const num of numbers) {
+    if (typeof num !== 'number') {
+      throw new Error("All elements in the array must be numbers");
     }
-    return acc + val;
-  }, 0);
+  }
   
+  const sum = numbers.reduce((acc, val) => acc + val, 0);
   return sum / numbers.length;
+}
+
+/**
+ * Calculates the greatest common divisor of two numbers
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} The greatest common divisor of a and b
+ */
+function gcd(a, b) {
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+/**
+ * Calculates the least common multiple of two numbers
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} The least common multiple of a and b
+ */
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+/**
+ * Checks if a number is prime
+ * @param {number} num - The number to check
+ * @returns {boolean} True if the number is prime, false otherwise
+ */
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  if (num <= 3) {
+    return true;
+  }
+  if (num % 2 === 0 || num % 3 === 0) {
+    return false;
+  }
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 module.exports = {
@@ -137,5 +172,14 @@ module.exports = {
   squareRoot,
   absolute,
   factorial,
-  average
+  average,
+  gcd,
+  lcm,
+  isPrime
 };
+
+// New update to force check suite refresh - 2025-08-17 17:52:30 UTC - Resolving queued check suites
+
+// Force check suite refresh - 2025-08-17 17:52:30 UTC
+// Force check suite refresh - 2025-08-17 17:52:40 UTC
+

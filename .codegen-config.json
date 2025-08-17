@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "timestamp": "2025-08-17T17:52:30Z",
+  "check_trigger": true,
+  "description": "Configuration file to trigger codegen-sh-staging check"
+}
+
