@@ -38,3 +38,4 @@ Some functions include error handling:
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
 - `gcd(a, b)` throws an error if the inputs are not integers
+
