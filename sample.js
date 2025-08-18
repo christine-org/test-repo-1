@@ -104,6 +104,53 @@ function factorial(num) {
 }
 
 /**
+ * Calculates the Greatest Common Divisor (GCD) of two integers
+ * @param {number} a - First integer
+ * @param {number} b - Second integer
+ * @returns {number} The greatest common divisor of a and b
+ * @throws {Error} If inputs are not integers
+ */
+function gcd(a, b) {
+  if (!Number.isInteger(a) || !Number.isInteger(b)) {
+    throw new Error('GCD is only defined for integers');
+  }
+  
+  // Use absolute values since GCD is always positive
+  a = Math.abs(a);
+  b = Math.abs(b);
+  
+  // Euclidean algorithm
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  
+  return a;
+}
+
+/**
+ * Calculates the Least Common Multiple (LCM) of two integers
+ * @param {number} a - First integer
+ * @param {number} b - Second integer
+ * @returns {number} The least common multiple of a and b
+ * @throws {Error} If inputs are not integers
+ */
+function lcm(a, b) {
+  if (!Number.isInteger(a) || !Number.isInteger(b)) {
+    throw new Error('LCM is only defined for integers');
+  }
+  
+  // Handle special cases
+  if (a === 0 || b === 0) {
+    return 0;
+  }
+  
+  // LCM formula: |a * b| / gcd(a, b)
+  return Math.abs(a * b) / gcd(a, b);
+}
+
+/**
  * Calculates the average of an array of numbers
  * @param {number[]} numbers - Array of numbers
  * @returns {number} The average of the numbers
@@ -137,5 +184,7 @@ module.exports = {
   squareRoot,
   absolute,
   factorial,
-  average
+  average,
+  gcd,
+  lcm
 };
