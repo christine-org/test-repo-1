@@ -128,6 +128,32 @@ function average(numbers) {
   return sum / numbers.length;
 }
 
+/**
+ * Calculates the greatest common divisor (GCD) of two integers
+ * @param {number} a - First integer
+ * @param {number} b - Second integer
+ * @returns {number} The greatest common divisor of a and b
+ * @throws {Error} If inputs are not integers
+ */
+function gcd(a, b) {
+  if (!Number.isInteger(a) || !Number.isInteger(b)) {
+    throw new Error('GCD is only defined for integers');
+  }
+  
+  // Use absolute values since GCD is always positive
+  a = Math.abs(a);
+  b = Math.abs(b);
+  
+  // Euclidean algorithm
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  
+  return a;
+}
+
 module.exports = {
   add,
   multiply,
@@ -137,5 +163,7 @@ module.exports = {
   squareRoot,
   absolute,
   factorial,
-  average
+  average,
+  gcd
 };
+
