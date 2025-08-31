@@ -8,13 +8,22 @@ on:
     branches: [ main ]
 
 jobs:
-  fail-job:
+  check-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Print exit
+      - name: Verify files exist
         run: |
-          exit 1 
+          if [ ! -f "LICENSE" ]; then
+            echo "LICENSE file is missing"
+            exit 1
+          fi
+          if [ ! -f "package.json" ]; then
+            echo "package.json file is missing"
+            exit 1
+          fi
+          echo "All required files exist"
+          exit 0
 
