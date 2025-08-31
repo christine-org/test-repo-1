@@ -1,0 +1,25 @@
+{
+  "name": "test-repo-1",
+  "version": "1.0.0",
+  "description": "A collection of JavaScript utility functions for common mathematical operations",
+  "main": "sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christine-org/test-repo-1.git"
+  },
+  "keywords": [
+    "math",
+    "utilities",
+    "javascript"
+  ],
+  "author": "christine-org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christine-org/test-repo-1/issues"
+  },
+  "homepage": "https://github.com/christine-org/test-repo-1#readme"
+}
+
