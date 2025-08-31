@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  fail-job:
+  success-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -16,6 +16,5 @@ jobs:
         
       - name: Print success
         run: |
-          echo "Fixed workflow that previously failed"
+          echo "Workflow completed successfully"
           exit 0
-
