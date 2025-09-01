@@ -1,0 +1,58 @@
+name: hello world
+
+on:
+  workflow_dispatch:  # This allows manual triggering
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Test GCD function
+        run: |
+          node -e "
+            const utils = require('./sample.js');
+            console.log('Testing GCD function...');
+            
+            // Test cases
+            const testCases = [
+              { a: 48, b: 18, expected: 6 },
+              { a: 17, b: 5, expected: 1 },
+              { a: 0, b: 5, expected: 5 },
+              { a: 5, b: 0, expected: 5 },
+              { a: -48, b: 18, expected: 6 },
+              { a: 48, b: -18, expected: 6 }
+            ];
+            
+            let allPassed = true;
+            
+            for (const test of testCases) {
+              const result = utils.gcd(test.a, test.b);
+              const passed = result === test.expected;
+              console.log(`GCD(${test.a}, ${test.b}) = ${result}, Expected: ${test.expected}, ${passed ? 'PASS' : 'FAIL'}`);
+              if (!passed) allPassed = false;
+            }
+            
+            // Test error handling
+            try {
+              utils.gcd(3.5, 2);
+              console.log('Error test failed: Should have thrown an error for non-integer input');
+              allPassed = false;
+            } catch (e) {
+              console.log('Error test passed: ' + e.message);
+            }
+            
+            if (!allPassed) {
+              console.error('Some tests failed!');
+              process.exit(1);
+            }
+            
+            console.log('All tests passed!');
+          "
+

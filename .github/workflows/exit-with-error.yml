@@ -14,7 +14,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Print exit
+      - name: Print success
         run: |
-          exit 1 
+          echo "This job now succeeds!"
+          exit 0
 
