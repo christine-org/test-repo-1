@@ -35,3 +35,26 @@ Some functions include error handling:
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
+
+## Installation
+
+To use these utility functions in your project:
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/christine-org/test-repo-1.git
+   ```
+
+2. Import the functions in your JavaScript file:
+   ```javascript
+   const mathUtils = require('./path/to/sample.js');
+   ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
