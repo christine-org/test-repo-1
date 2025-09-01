@@ -1,0 +1,21 @@
+name: hello world
+
+on:
+  workflow_dispatch:  # This allows manual triggering
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  success-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Print success message
+        run: |
+          echo "Workflow completed successfully!"
+          exit 0
+
