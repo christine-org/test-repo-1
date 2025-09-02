@@ -14,6 +14,15 @@ This repository contains a collection of JavaScript utility functions for common
 - `factorial(num)` - Calculates the factorial of a non-negative integer
 - `average(numbers)` - Calculates the average of an array of numbers
 
+## Installation
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/christine-org/test-repo-1.git
+cd test-repo-1
+```
+
 ## Usage
 
 ```javascript
@@ -35,3 +44,12 @@ Some functions include error handling:
 - `squareRoot(num)` throws an error if the input is negative
 - `factorial(num)` throws an error if the input is negative or not an integer
 - `average(numbers)` throws an error if the array is empty or contains non-numeric values
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
+
