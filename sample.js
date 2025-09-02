@@ -104,6 +104,20 @@ function factorial(num) {
 }
 
 /**
+ * Calculates the remainder when dividing the first number by the second
+ * @param {number} a - First number (dividend)
+ * @param {number} b - Second number (divisor)
+ * @returns {number} The remainder of a divided by b
+ * @throws {Error} If b is zero
+ */
+function modulo(a, b) {
+  if (b === 0) {
+    throw new Error('Modulo by zero is not allowed');
+  }
+  return a % b;
+}
+
+/**
  * Calculates the average of an array of numbers
  * @param {number[]} numbers - Array of numbers
  * @returns {number} The average of the numbers
@@ -137,5 +151,6 @@ module.exports = {
   squareRoot,
   absolute,
   factorial,
-  average
+  average,
+  modulo
 };
